@@ -1,0 +1,264 @@
+<!--
+<p id="notice"><%= notice %></p>
+
+<h1>Constellations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @constellations.each do |constellation| %>
+      <tr>
+        <td><%= link_to 'Show', constellation %></td>
+        <td><%= link_to 'Edit', edit_constellation_path(constellation) %></td>
+        <td><%= link_to 'Destroy', constellation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Constellation', new_constellation_path %>
+-->
+<div class="container">
+	<div class="content_wrapper">
+		<div class="wrapper">
+			<h1 class="center">별자리</h1>
+			<div class="header center">
+				<a href="https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:tlXewr.jpg" target="_blank">
+					<img src="https://file.namu.moe/file/%ED%8C%8C%EC%9D%BC%3AtlXewr.jpg" class="header_img" alt="별자리판"/>
+				</a>
+			</div> 
+			<p class="header_text">
+			참고로 이 별자리판에 나와있는 별자리는 대략 북회귀선에 해당하는 위도(23.5°N)에서 볼 수 있는 것들로서, 12시(왼쪽으로 약 7° 정도 기울어져 있음)~1시 구간은 8월 별자리이며, 1시~2시 구간은 9월 별자리, 2시~3시 구간은 10월 별자리이다.
+			</p>
+		</div>
+		<div class="wrapper" id="sec1">
+			<h2><span class="red">1. </span>설명</h2>
+			<p>
+				하늘에 떠있는 일정한 형상을 한 별들의 모임을 기원으로 한다. 성좌(星座)라고도 부른다.
+
+				나라나 지역마다 차이가 있었으며, 고대 중국의 경우 3원 이십팔수 체계가 있다. 그러나 현대천문학에서 말하는 <span class="highlight">별자리</span>는 '별들의 모임'이 아닌 '천구의 일정한 공간을 구획한 것'이다. 전문 천문학자에게 <span class="highlight">별자리</span>란 천체를 쉽게 찾기 위한 주소일 뿐 더도 덜도 아니다.
+
+				고대인들의 상상력이 총동원된 것들로써 잘 봐 줘도 장어처럼 보이는 길쭉한 <span class="highlight">별자리</span>를 물고기 두 마리가 튀어오르는 모습이라면서 물고기자리라고 하는 등 현대 상식으로는 이해할 수 없는 것들이 많다. 특히 남반구의 <span class="highlight">별자리</span>들이나 북반구에서도 최근에 만들어진 것들은 그야말로 대충 만든 것이라 조금 과도한 상상력이 필요하다.
+
+				고대인들은 <span class="highlight">별자리</span>의 움직임이 인간 개개인의 삶과 죽음에 연관이 되어 있을거라 여겼다. 별을 사후세계의 일면이거나 혹은 하늘나라의 일면으로 간주했기 때문이다. 그리스로마 신화에서도 그렇지만 많은 지방에서 "뜻깊은 일을 하거나 간절한 소망이 있는 자는 신들이 하늘의 <span class="highlight">별자리</span>로 만들어준다"는 신앙이 엿보인다(동심파괴를 막기 위해 "사람은 죽으면 별이 된대"라고 하거나). 오리엔트 지방의 양치기들이 저녁에 할 게 없어서(…) 별을 보다가 <span class="highlight">별자리</span>를 만들었다는 설도 있다. 동방박사 이야기와 같은 격.
+
+				오늘날에도 <span class="highlight">별자리</span>가 가장 중시되는 분야는 역시 항해. 지표로 삼을 만한 것이 전무하다시피 한 대양 한복판에서 <span class="highlight">별자리</span>는 방향 및 위도 측정의 중요한 척도가 된다. 실제로 천문 관측 기구인 육분의는 항해에서도 필수품이며, 이를 반영하듯 육분의, 팔분의, 직각자, 나침반, 시계와 달력 등 항해술과 관련된 도구들이 <span class="highlight">별자리</span> 명칭으로 올라와 있다. 정확한 시계와 달력, 그리고 <span class="highlight">별자리</span> 만으로도 경도를 알아낼 수 있었고, gps가 없던 시절 항해를 <span class="highlight">별자리</span>를 이용해서 위치를 측정해야 했었다.
+
+				당연한 이야기지만 같은 <span class="highlight">별자리</span>라고 해도 각각의 별은 서로 근처에 있는 것이 아니라 지구와의 거리가 넘사벽으로 차이가 난다. 북두칠성의 미자르는 지구와 80광년 정도 떨어져 있지만 알카이드는 101광년 떨어져 있다. 많은 소프트 SF 작품들이 오류를 내는 것 중 하나.
+			</p>
+		</div>
+		<div class="wrapper" id="sec2">
+			<h2><span class="red">2. </span>유래</h2>
+			<p>
+				최초의 <span class="highlight">별자리</span>는 약 5000년 전 바빌로니아인들이 제정한 뒤, 기원전 3000년경에 태양 근처를 지나는 <span class="highlight">별자리</span>들인 황도 12궁이 만들어지고 고대 이집트에서도 <span class="highlight">별자리</span>가 기록되기 시작한다. 이것이 그리스로 전해져 그리스의 영웅들을 기리는 <span class="highlight">별자리</span>가 만들어졌으며 또한 구세기의 학자들이 <span class="highlight">별자리</span>를 발견하고 명칭을 붙여서 현재는 국제 천문연맹에서 공인한 88개의 <span class="highlight">별자리</span>가 쓰여지고 있다.
+
+				동양권(중국 기원)의 <span class="highlight">별자리</span>는 현재의 천구 개념을 만들고 천구의 북극과 적도를 기준으로 삼아 기하학적인 공간 안에 별들이 위치하게 만들었다고 한다. 다만 주나라 시절 기준이라 세차운동때문에 지금은 극, 적도랑 안맞는다. 상대적으로 덜 알려진 체계중엔 12지를 대입하여 현대 <span class="highlight">별자리</span>와 같은 구획개념의 <span class="highlight">별자리</span>가 있었다고 한다.이때는 여러모로 시대를 앞서나갔는데 지금은 대륙의 기상을 뽐내고 있다
+
+				이미 사라진 <span class="highlight">별자리</span>도 있는데, 아르고자리가 대표적. 너무나 커다란 <span class="highlight">별자리</span> 였기에, 각각 용골자리, 나침반자리, 돛자리, 고물자리 4개로 분리되었다.
+			</p>
+		</div>
+		<div class="wrapper" id="sec3">
+			<h2><span class="red">3. </span>생일별 별자리 - 황도 12궁</h2>
+			<div class="center">
+				<table class='table'>
+					<thead class="thead red">
+						<tr>
+							<th class="center width_100"><strong>별자리</strong></th>
+							<th class="center width_200"><strong>날짜</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table_row_even">
+							<td class="center">양자리</td>
+							<td class="center">3월 21일 ~ 4월 19일</td>
+						</tr>
+						<tr class="table_row_odd">
+							<td class="center">황소자리</td>
+							<td class="center">4월 20일 ~ 5월 20일</td>
+						</tr>
+						<tr class="table_row_even">
+							<td class="center">쌍둥이자리</td>
+							<td class="center">5월 21일 ~ 6월 21일</td>
+						</tr>
+						<tr class="table_row_odd">
+							<td class="center">게자리</td>
+							<td class="center">6월 22일 ~ 7월 22일</td>
+						</tr>
+						<tr class="table_row_even">
+							<td class="center">사자자리</td>
+							<td class="center">7월 23일 ~ 8월 22일</td>
+						</tr>
+						<tr class="table_row_odd">
+							<td class="center">처녀자리</td>
+							<td class="center">8월 23일 ~ 9월 23일</td>
+						</tr>
+						<tr class="table_row_even">
+							<td class="center">천칭자리</td>
+							<td class="center">9월 24일 ~ 10월 22일</td>
+						</tr>
+						<tr class="table_row_odd">
+							<td class="center">전갈자리</td>
+							<td class="center">10월 23일 ~ 11월 22일</td>
+						</tr>
+						<tr class="table_row_even">
+							<td class="center">사수자리</td>
+							<td class="center">11월 23일 ~ 12월 21일</td>
+						</tr>
+						<tr class="table_row_odd">
+							<td class="center">염소자리</td>
+							<td class="center">12월 22일 ~ 1월 19일</td>
+						</tr>
+						<tr class="table_row_even">
+							<td class="center">물병자리</td>
+							<td class="center">1월 20일 ~ 2월 18일</td>
+						</tr>
+						<tr class="table_row_odd">
+							<td class="center">물고기자리</td>
+							<td class="center">2월 19일 ~ 3월 20일</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="horo_wrapper">
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/aries.png" alt="양자리"/>
+					<div><strong>양자리</strong></div>
+					<span>3. 21 - 4. 19</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/taurus.png" alt="황소자리"/>
+					<div><strong>황소자리</strong></div>
+					<span>4. 20 - 5. 20</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/gemini.png" alt="쌍둥이자리"/>
+					<div><strong>쌍둥이자리</strong></div>
+					<span>5. 21 - 6. 21</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/cancer.png" alt="게자리"/>
+					<div><strong>게자리</strong></div>
+					<span>6. 22 - 7. 22</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/leo.png" alt="사자자리"/>
+					<div><strong>사자자리</strong></div>
+					<span>7. 23 - 8.22</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/virgo.png" alt="처녀자리"/>
+					<div><strong>처녀자리</strong></div>
+					<span>8. 23 - 9. 23</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/libra.png" alt="천칭자리"/>
+					<div><strong>천칭자리</strong></div>
+					<span>9. 24 - 10. 22</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/scorpio.png" alt="전갈자리"/>
+					<div><strong>전갈자리</strong></div>
+					<span>10. 23 - 11. 22</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/sagittarius.png" alt="사수자리"/>
+					<div><strong>사수자리</strong></div>
+					<span>11. 23 - 12. 21</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/capricorn.png" alt="염소자리"/>
+					<div><strong>염소자리</strong></div>
+					<span>12. 22 - 1. 19</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/aquarius.png" alt="물병자리"/>
+					<div><strong>물병자리</strong></div>
+					<span>1. 20 - 2. 18</span>
+				</div>
+				<div class="div_25">
+					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/pisces.png" alt="물고기자리"/>
+					<div><strong>물고기자리</strong></div>
+					<span>2. 19 - 3. 20</span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper" id="sec4">
+			<h2><span class="red">4. </span>폐지된 별자리</h2>
+			<p>
+프톨레마이오스가 48개의 <span class="highlight">별자리</span>를 지정한 이래, 1930년 국제천문연맹(iau)에서 현대의 88개의 <span class="highlight">별자리</span>를 지정하기까지 여러 천문학자들에 의해 새로운 <span class="highlight">별자리</span>들이 신설, 분리되거나 통폐합되어 왔다. 여기에 나온 <span class="highlight">별자리</span>들은 1930년 이전에 한때 통용되었으나 현재는 통용되지 않는 <span class="highlight">별자리</span>들이다. 
+참고로 아르고자리는 프톨레마이오스 48 <span class="highlight">별자리</span>들 가운데 유일하게 폐지된 <span class="highlight">별자리</span>이다.
+			</p>
+			<ol>
+				<li><strong>거머리자리</strong>(<em>hirudo</em>)</li>
+				<li><strong>거북자리</strong>(<em>testudo</em>)</li>
+				<li><strong>고양이자리</strong>(<em>felis</em>)</li>
+				<li><strong>기구자리</strong>(<em>globus aerostaticus</em>)</li>
+				<li><strong>남쪽화살자리</strong>(<em>sagitta australis</em>)</li>
+				<li><strong>돛대자리</strong>(<em>malus</em>)</li>
+				<li><strong>두꺼비자리</strong>(<em>bufo</em>)</li>
+				<li><strong>로그라인자리</strong>(<em>lochium funis</em>)</li>
+				<li><strong>민달팽이자리</strong>(<em>limax</em>)</li>
+				<li><strong>발전기자리</strong>(<em>machina electrica</em>)</li>
+				<li><strong>백합자리</strong>(<em>lilium</em>)</li>
+				<li><strong>뱀장어자리</strong>(<em>anguilla</em>)</li>
+				<li><strong>북쪽파리자리</strong>(<em>musca borealis</em>)</li>
+				<li><strong>사분의자리</strong>(<em>quadrans muralis</em>), <strong>수탉자리</strong>(<em>gallus</em>)</li>
+				<li><strong>순록자리</strong>(<em>rangifer</em>)</li>
+				<li><strong>아르고자리</strong>(<em>argo navis</em>)</li>
+				<li><strong>올빼미자리</strong>(<em>noctua</em>)</li>
+				<li><strong>요단강자리</strong>(<em>jordanus</em>)</li>
+				<li><strong>조판소자리</strong>(<em>officina typographica</em>)</li>
+				<li><strong>작은게자리</strong>(<em>cancer minor</em>)</li>
+				<li><strong>작은삼각형자리</strong>(<em>triangulum minor</em>)</li>
+				<li><strong>장미자리</strong>(<em>rosa</em>)</li>
+				<li><strong>지렁이자리</strong>(<em>lumbricus</em>)</li>
+				<li><strong>천산갑자리</strong>(<em>manis</em>)</li>
+				<li><strong>케르베로스자리</strong>(<em>cerberus</em>)</li>
+				<li><strong>통구멍자리</strong>(<em>uranoscopus</em>)</li>
+				<li><strong>티그리스자리</strong>(<em>tigris</em>)</li>
+				<li><strong>파에톤자리</strong>(<em>phaethon</em>)</li>
+				<li><strong>프리드리히대왕자리</strong>(<em>frederici honores</em>), <strong>해마자리</strong>(<em>hippocampus</em>)</li>
+				<li><strong>해시계자리</strong>(<em>solarium</em>)</li>
+				<li><strong>허셜망원경자리</strong>(<em>telescopium herschelii</em>) 등</li>
+			</ol>
+			<p>
+				또한 현대의 88개 별자리들 가운데 과거에 다른 명칭으로 통용된 경우도 있다.
+			</p>
+			<ul>
+				<li><strong>그물자리 - 마름모자리</strong>(<em>quadratum</em>)</li>
+				<li><strong>기린자리 - 낙타자리</strong>(<em>camelus</em>)</li>
+				<li><strong>두루미자리 - 플라밍고자리</strong>(<em>phoenicopterus</em>)</li>
+				<li><strong>북쪽왕관자리 - 왕관자리</strong>(<em>corona</em>)</li>
+				<li><strong>삼각형자리 - 큰삼각형자리</strong>(<em>triangulum major</em>), <strong>북쪽삼각형자리</strong>(<em>triangulum boreale</em>), <strong>델타자리</strong>(<em>deltoton</em>)</li>
+				<li><strong>조랑말자리 - 말자리</strong>(<em>equus</em>)</li>
+				<li><strong>큰개자리 - 개자리</strong>(<em>canis</em>)</li>
+				<li><strong>파리자리 - 남쪽파리자리</strong>(<em>musca australe</em>)</li>
+				<li><strong>화가자리 - 난간자리</strong>(<em>pluteum</em>)</li>
+			</ul>
+		</div>
+		<div class="wrapper bg_warning" id="sec5">
+			<strong>자료 출처:
+				<a href="https://namu.wiki/w/%eb%b3%84%ec%9e%90%eb%a6%ac" target="_blank">
+					나무위키 > 별자리		
+				</a>
+			</strong>
+		</div>
+	</div>
+	<div class="side_menu"> 
+		<h4 id="side_menu_title">목차</h4>
+		<ol>
+			<li><a href="#sec1">설명</a></li>
+			<li><a href="#sec2">유래</a></li>
+			<li><a href="#sec3">생일별 별자리</a></li>
+			<li><a href="#sec4">폐지된 별자리</a></li>
+			<li><a href="#sec5">자료 출처</a></li>
+		</ol>
+	</div>
+</div>
