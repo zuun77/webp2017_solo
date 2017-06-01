@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: zuun
-  password: Rlawnsgur1@
+  username: zuun_webp
+  password: webp2017!@#
   host: development.cpbk8a1zelj3.ap-northeast-1.rds.amazonaws.com
   database: starstar
 

@@ -10,15 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170601044731) do
+ActiveRecord::Schema.define(version: 20170601102801) do
 
-  create_table "constellations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "constellations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.date "start_dt"
     t.date "end_dt"
     t.string "img"
     t.string "title"
   end
 
+  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "documents_id"
+    t.integer "sequence"
+    t.index ["documents_id"], name: "index_contents_on_documents_id"
+  end
+
+  create_table "documents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "header"
+    t.string "title"
+    t.string "reference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "contents", "documents", column: "documents_id"
 end
