@@ -75,118 +75,23 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="table_row_even">
-							<td class="center">양자리</td>
-							<td class="center">3월 21일 ~ 4월 19일</td>
-						</tr>
-						<tr class="table_row_odd">
-							<td class="center">황소자리</td>
-							<td class="center">4월 20일 ~ 5월 20일</td>
-						</tr>
-						<tr class="table_row_even">
-							<td class="center">쌍둥이자리</td>
-							<td class="center">5월 21일 ~ 6월 21일</td>
-						</tr>
-						<tr class="table_row_odd">
-							<td class="center">게자리</td>
-							<td class="center">6월 22일 ~ 7월 22일</td>
-						</tr>
-						<tr class="table_row_even">
-							<td class="center">사자자리</td>
-							<td class="center">7월 23일 ~ 8월 22일</td>
-						</tr>
-						<tr class="table_row_odd">
-							<td class="center">처녀자리</td>
-							<td class="center">8월 23일 ~ 9월 23일</td>
-						</tr>
-						<tr class="table_row_even">
-							<td class="center">천칭자리</td>
-							<td class="center">9월 24일 ~ 10월 22일</td>
-						</tr>
-						<tr class="table_row_odd">
-							<td class="center">전갈자리</td>
-							<td class="center">10월 23일 ~ 11월 22일</td>
-						</tr>
-						<tr class="table_row_even">
-							<td class="center">사수자리</td>
-							<td class="center">11월 23일 ~ 12월 21일</td>
-						</tr>
-						<tr class="table_row_odd">
-							<td class="center">염소자리</td>
-							<td class="center">12월 22일 ~ 1월 19일</td>
-						</tr>
-						<tr class="table_row_even">
-							<td class="center">물병자리</td>
-							<td class="center">1월 20일 ~ 2월 18일</td>
-						</tr>
-						<tr class="table_row_odd">
-							<td class="center">물고기자리</td>
-							<td class="center">2월 19일 ~ 3월 20일</td>
-						</tr>
+						<% @constellations.each_with_index do |constellation, index| %>
+							<tr class="table_row_<%= index%2== 0 ? 'even' : 'odd' %>">
+							<td class="center"><%= constellation.title %></td>
+							<td class="center"><%= constellation.start_dt.strftime("%m월 %d일") %> ~ <%= constellation.end_dt.strftime("%m월 %d일") %></td>
+						  </tr>
+						<% end %>
 					</tbody>
 				</table>
 			</div>
 			<div class="horo_wrapper">
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/aries.png" alt="양자리"/>
-					<div><strong>양자리</strong></div>
-					<span>3. 21 - 4. 19</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/taurus.png" alt="황소자리"/>
-					<div><strong>황소자리</strong></div>
-					<span>4. 20 - 5. 20</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/gemini.png" alt="쌍둥이자리"/>
-					<div><strong>쌍둥이자리</strong></div>
-					<span>5. 21 - 6. 21</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/cancer.png" alt="게자리"/>
-					<div><strong>게자리</strong></div>
-					<span>6. 22 - 7. 22</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/leo.png" alt="사자자리"/>
-					<div><strong>사자자리</strong></div>
-					<span>7. 23 - 8.22</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/virgo.png" alt="처녀자리"/>
-					<div><strong>처녀자리</strong></div>
-					<span>8. 23 - 9. 23</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/libra.png" alt="천칭자리"/>
-					<div><strong>천칭자리</strong></div>
-					<span>9. 24 - 10. 22</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/scorpio.png" alt="전갈자리"/>
-					<div><strong>전갈자리</strong></div>
-					<span>10. 23 - 11. 22</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/sagittarius.png" alt="사수자리"/>
-					<div><strong>사수자리</strong></div>
-					<span>11. 23 - 12. 21</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/capricorn.png" alt="염소자리"/>
-					<div><strong>염소자리</strong></div>
-					<span>12. 22 - 1. 19</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/aquarius.png" alt="물병자리"/>
-					<div><strong>물병자리</strong></div>
-					<span>1. 20 - 2. 18</span>
-				</div>
-				<div class="div_25">
-					<img class="horo_img" src="http://www.horoscope.com/images-US/signs/pisces.png" alt="물고기자리"/>
-					<div><strong>물고기자리</strong></div>
-					<span>2. 19 - 3. 20</span>
-				</div>
+				<% @constellations.each_with_index do |constellation, index| %>
+					<div class="div_25">
+						<img class="horo_img" src="<%=constellation.img%>" alt="양자리"/>
+						<div><strong><%= constellation.title %></strong></div>
+						<span><%= constellation.start_dt.strftime("%m. %d") %> - <%= constellation.end_dt.strftime("%m. %d") %></td>
+					</div>
+				<% end %>
 			</div>
 		</div>
 		<div class="wrapper" id="sec4">
