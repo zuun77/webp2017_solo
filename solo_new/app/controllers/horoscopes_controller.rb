@@ -4,7 +4,24 @@ class HoroscopesController < ApplicationController
   # GET /horoscopes
   # GET /horoscopes.json
   def index
-    @horoscopes = Horoscope.all
+    @horoscopes = Horoscope.all 
+	@contents = Content.all
+  end
+
+
+  def fortune
+	@id = params[:id].to_i
+    @horoscopes = Horoscope.all 
+
+	date = Time.new
+	srand date.day*date.month*date.year*@id # same for same day
+	
+	respond_to do |format|
+		format.html
+		format.json do
+			render :json => [@horoscopes[rand(10)], @horoscopes[rand(10)], @horoscopes[rand(10)]]
+		end
+	end
   end
 
   # GET /horoscopes/1

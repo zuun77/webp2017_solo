@@ -92,12 +92,24 @@ th, td {
 	width:22%;
 }
 
+.div_33 {
+	padding:10px;
+	display:inline-block;
+	text-align:center;
+	width:31%;
+}
+
 .horo_img {
 	width:50%;
 }
 
 .bg_warning {
 	background-color:#DDBBBB;
+	margin-top:10px;
+}
+
+.bg_info {
+	background-color:#5BC0DE;
 	margin-top:10px;
 }
 
@@ -119,4 +131,13 @@ th, td {
 
 #side_menu_title {
 	margin-left: 15px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.hidden {
+	display:none;
 }
