@@ -1,0 +1,122 @@
+body {
+	padding:10px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif, "Comic Sans MS", cursive, sans-serif;
+	background-color:#ececec;
+}
+
+.header {
+	background-color:#111177;
+	background-image:url('http://www.unnya.com/content/contents/upload/2016-04/57147c5fb8cb6.jpg');
+	background-position:center;
+	background-size:100%;
+	padding:10px;
+	height:300px;
+}
+
+.header_img {
+	border-radius:50%;
+	width:300px;
+	height:300px;
+}
+
+.header_text {
+	color:#333;
+	font-size:0.95em;
+}
+
+.wrapper {
+	background-color:#FFFFFF;
+	margin-bottom:20px;
+	padding:10px;
+}
+
+.width_100 {
+	width:100px;
+}
+
+.width_200 {
+	width:200px;
+}
+
+.center {
+	text-align: center;
+}
+
+h2 {
+	color:#333;
+	padding:6px 0 6px;
+	border-bottom:1px solid #bfbfbf;
+}
+
+.highlight {
+	background-color:#DDD;
+	color: #33C;
+}
+
+table {
+	border:1px solid #ccc;
+	margin:auto;
+	vertical-align:top;
+	border-collapse:collapse;
+}
+
+tr {
+	border:1px solid #ddd;
+}
+
+th, td {
+	padding:10px;
+}
+
+.red {
+	color:#CC0000;
+}
+
+.table_row_odd {
+	background-color:#FFFFFF;
+}
+
+.table_row_even {
+	background-color:#F1F1F1;
+}
+
+.horo_wrapper {
+	padding:10px;
+	width:100%;
+}
+
+.div_25 {
+	padding:10px;
+	display:inline-block;
+	text-align:center;
+	width:22%;
+}
+
+.horo_img {
+	width:50%;
+}
+
+.bg_warning {
+	background-color:#DDBBBB;
+	margin-top:10px;
+}
+
+.container {
+	height:auto;
+}
+
+.content_wrapper {
+	width: 75%;
+    position: absolute;
+}
+.side_menu {
+	width: 20%;
+    position: fixed;
+    background: #FFFFFF;
+	right:1%;
+	padding:5px;
+}
+
+#side_menu_title {
+	margin-left: 15px;
+}

@@ -1,0 +1,37 @@
+<%= form_with(model: horoscope, local: true) do |form| %>
+  <% if horoscope.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(horoscope.errors.count, "error") %> prohibited this horoscope from being saved:</h2>
+
+      <ul>
+      <% horoscope.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :horoscope_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_dt %>
+    <%= form.date_select :start_dt, id: :horoscope_start_dt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_dt %>
+    <%= form.date_select :end_dt, id: :horoscope_end_dt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :img_url %>
+    <%= form.text_field :img_url, id: :horoscope_img_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

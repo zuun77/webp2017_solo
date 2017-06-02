@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @horoscope.title %>
+</p>
+
+<p>
+  <strong>Start dt:</strong>
+  <%= @horoscope.start_dt %>
+</p>
+
+<p>
+  <strong>End dt:</strong>
+  <%= @horoscope.end_dt %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @horoscope.img_url %>
+</p>
+
+<%= link_to 'Edit', edit_horoscope_path(@horoscope) %> |
+<%= link_to 'Back', horoscopes_path %>
