@@ -104,12 +104,13 @@
 				success: function(data) {
 					$(".hidden").removeClass("hidden");
 					data.forEach(function(d, i) {
-						console.log(d.img_url);
-						console.log(d.title);
 						$("#comb_img"+(i+1)).attr("src", d.img_url);
 						$("#comb_img"+(i+1)).attr("alt", d.title);
 						$("#comb"+(i+1)).text(d.title);
 					});
+					$('html, body').animate({
+						scrollTop: $("#comb1").offset().top
+					}, 20);
 				}
 			});
 		});
