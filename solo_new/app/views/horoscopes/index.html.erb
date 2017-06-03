@@ -49,7 +49,7 @@
 				<% @horoscopes.each_with_index do |horoscope, index| %>
 				<a href="javascript:;" data-id="<%= horoscope.id %>">
 					<div class="div_25">
-						<img class="horo_img" src="<%=horoscope.img_url %>" alt="양자리"/>
+						<img class="horo_img" src="<%= horoscope.img_url %>" alt="<%= horoscope.title %>"/>
 						<div><strong><%= horoscope.title %></strong></div>
 						<span><%= horoscope.start_dt.strftime("%m. %d") %> - <%= horoscope.end_dt.strftime("%m. %d") %></span>
 					</div>
