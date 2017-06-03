@@ -42,8 +42,10 @@ class ContentsController < ApplicationController
   def update
     respond_to do |format|
       if @content.update(content_params)
-        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
-        format.json { render :show, status: :ok, location: @content }
+#        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
+#        format.json { render :show, status: :ok, location: @content }
+		format.html { redirect_to "/", notice: 'Content was successfully updated.' }
+
       else
         format.html { render :edit }
         format.json { render json: @content.errors, status: :unprocessable_entity }
@@ -69,6 +71,6 @@ class ContentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def content_params
-      params.fetch(:content, {})
+	  params.require(:content).permit(:title, :text, :sequence)
     end
 end
