@@ -14,7 +14,12 @@
 		
 		<% @contents.each do |content| %> 
 		<div class="wrapper" id="sec<%= content.sequence %>">
-			<h2><span class="red"><%= content.sequence %>. </span><%= content.title %></h2>
+			<div class="bottom_border">
+				<h2 style="display:inline-block"><span class="red"><%= content.sequence %>. </span><%= content.title %></h2>
+				<span class="f-right edit_label red">
+					<strong><%= link_to '[편집]', edit_content_path(content) %></strong>
+				</span>
+			</div>
 			<p>
 			<%= raw content.text %>
 			</p>
@@ -116,4 +121,10 @@
 		});
 
 	});
+
+	$(document).on('turbolinks:click', function (event) {
+		if (event.target.getAttribute('href').charAt(0) === '#') {
+			return event.preventDefault()
+		}
+	})
 </script>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contents
   resources :horoscopes
   get '/' => "horoscopes#index"
   get '/api/horoscopes/fortune/:id' => 'horoscopes#fortune'

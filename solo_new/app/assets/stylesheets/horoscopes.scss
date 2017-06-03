@@ -44,8 +44,8 @@ body {
 
 h2 {
 	color:#333;
-	padding:6px 0 6px;
-	border-bottom:1px solid #bfbfbf;
+	padding:2px 0 0;
+	line-height:10px;
 }
 
 .highlight {
@@ -140,4 +140,16 @@ a {
 
 .hidden {
 	display:none;
+}
+
+.edit_label {
+	margin-top:20px;
+}
+
+.f-right {
+	float:right;
+}
+
+.bottom_border {
+	border-bottom:1px solid #bfbfbf;
 }
