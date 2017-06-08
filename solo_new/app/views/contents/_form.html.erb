@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/assets/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <%= form_with(model: content, local: true) do |form| %>
 	<% if content.errors.any? %>
 		<div id="error_explanation">
@@ -20,17 +21,18 @@
 	</div>
 <% end %>
 
-<script type="text/javascript" src="/assets/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <script type="text/javascript">
-$(function() {
+$(document).ready(function() {
 	var oEditors = [];
-	nhn.husky.EZCreator.createInIFrame({
-		oAppRef: oEditors,
-		elPlaceHolder: "smarteditor",
-		sSkinURI: "/assets/se2/SmartEditor2Skin.html",
-		fCreator: "createSEditor2"
-	});
 
+	setTimeout(function() {
+		window.nhn.husky.EZCreator.createInIFrame({
+			oAppRef: oEditors,
+			elPlaceHolder: "smarteditor",
+			sSkinURI: "/assets/se2/SmartEditor2Skin.html",
+			fCreator: "createSEditor2"
+		});
+	}, 300);
 
 	$("#submit_btn").click(function(e) {
 		oEditors.getById["smarteditor"].exec("UPDATE_CONTENTS_FIELD", []);
