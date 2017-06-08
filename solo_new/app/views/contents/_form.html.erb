@@ -12,10 +12,29 @@
 	<% end %>
 
 	<div class="field">
-		<%= form.text_area :text, id: :content_text %>
+		<%= form.text_area :text, id: "smarteditor", rows: "10", cols: "100" %>
 	</div>
 
 	<div class="actions">
-		<button class="submit" type="submit">수정하기</button>
+		<button class="submit" type="button" id="submit_btn">수정하기</button>
 	</div>
 <% end %>
+
+<script type="text/javascript" src="/assets/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(function() {
+	var oEditors = [];
+	nhn.husky.EZCreator.createInIFrame({
+		oAppRef: oEditors,
+		elPlaceHolder: "smarteditor",
+		sSkinURI: "/assets/se2/SmartEditor2Skin.html",
+		fCreator: "createSEditor2"
+	});
+
+
+	$("#submit_btn").click(function(e) {
+		oEditors.getById["smarteditor"].exec("UPDATE_CONTENTS_FIELD", []);
+		$(this).parents("form").submit();
+	});
+});
+</script>
