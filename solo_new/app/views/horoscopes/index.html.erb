@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="content_wrapper">
-		<div class="wrapper">
+		<div class="wrapper" id="header">
 			<h1 class="center">별자리</h1>
 			<div class="header center">
 				<a href="https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:tlXewr.jpg" target="_blank">
@@ -13,7 +13,7 @@
 		</div>
 		
 		<% @contents.each do |content| %> 
-		<div class="wrapper" id="sec<%= content.sequence %>">
+		<div class="section wrapper" id="sec<%= content.sequence %>">
 			<div class="bottom_border">
 				<h2 style="display:inline-block"><span class="red"><%= content.sequence %>. </span><%= content.title %></h2>
 				<span class="f-right edit_label red">
@@ -25,7 +25,7 @@
 			</p>
 		</div>
 		<% end %>
-		<div class="wrapper" id="sec4">
+		<div class="section wrapper" id="sec4">
 			<h2><span class="red">4. </span>생일별 별자리 - 황도 12궁</h2>
 			<div class="center">
 				<table class='table'>
@@ -56,7 +56,7 @@
 				</a>
 				<% end %>
 			</div>
-			<div class="wrapper bg_info center" id="sec5">
+			<div class="wrapper bg_info center">
 				<strong>
 					내 별자리를 클릭해 오늘의 운세를 확인하세요
 				</strong>
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrapper bg_warning" id="sec5">
+		<div class="section wrapper bg_warning" id="sec5">
 			<strong>자료 출처:
 				<a href="https://namu.wiki/w/%eb%b3%84%ec%9e%90%eb%a6%ac" target="_blank">
 					나무위키 > 별자리		
@@ -120,6 +120,26 @@
 			});
 		});
 
+		$(".side_menu a").on('click', function(event) {
+			$(this).parent().find('li').removeClass('side_active');
+			$(this).parent("li").addClass("side_active");
+		});
+
+		$(window).on('scroll', function() {
+			$($(".section").get().reverse()).each(function() {
+				var targetTop = $(this).offset().top;
+				var targetHeight = $(this).height();
+				var screenTop = $(window).scrollTop();
+				var screenSize = $(window).height();
+				if(targetTop > screenTop && targetTop < screenTop + screenSize) {
+					var id = $(this).attr('id');
+					$(".side_menu li").removeClass('side_active');
+					$(".side_menu a[href=\"#"+ id +"\"]").parent().addClass('side_active');
+				}
+			});
+		});
+
+		$(window).scroll();
 	});
 
 	$(document).on('turbolinks:click', function (event) {
