@@ -6,7 +6,7 @@ body {
 
 .header {
 	background-color:#111177;
-	background-image:url('http://www.unnya.com/content/contents/upload/2016-04/57147c5fb8cb6.jpg');
+	background-image:url('/assets/images/header_background.jpg');
 	background-position:center;
 	background-size:100%;
 	padding:10px;
@@ -155,3 +155,10 @@ a {
 .bottom_border {
 	border-bottom:1px solid #bfbfbf;
 }
+
+.side_active {
+	font-weight: bold;
+	color:#CC0000;
+	text-decoration:underline;	
+}
+

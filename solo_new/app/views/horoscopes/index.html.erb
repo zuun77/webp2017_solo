@@ -4,7 +4,7 @@
 			<h1 class="center">별자리</h1>
 			<div class="header center">
 				<a href="https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:tlXewr.jpg" target="_blank">
-					<img src="https://file.namu.moe/file/%ED%8C%8C%EC%9D%BC%3AtlXewr.jpg" class="header_img" alt="별자리판"/>
+					<%= image_tag 'planisphere.jpg', class:'header_img', alt:'별자리판' %>
 				</a>
 			</div> 
 			<p class="header_text">
@@ -49,7 +49,7 @@
 				<% @horoscopes.each_with_index do |horoscope, index| %>
 				<a href="javascript:;" data-id="<%= horoscope.id %>">
 					<div class="div_25">
-						<img class="horo_img" src="<%= horoscope.img_url %>" alt="<%= horoscope.title %>"/>
+						<%= image_tag horoscope.img_url, class:'horo_img', alt:horoscope.title %>
 						<div><strong><%= horoscope.title %></strong></div>
 						<span><%= horoscope.start_dt.strftime("%m. %d") %> - <%= horoscope.end_dt.strftime("%m. %d") %></span>
 					</div>
